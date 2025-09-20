@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Hearts Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#84cc16',
+                        dark: '#065f46',
+                        light: '#d9f99d',
+                    },
+                    fontFamily: {
+                        sans: ['"Rajdhani"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(132, 204, 22, 0.1) 100%);
+            font-family: 'Rajdhani', sans-serif;
+        }
+        
+        .gradient-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(132, 204, 22, 0.2) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .neon-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+        
+        .neon-btn:hover {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.8), 0 0 30px rgba(132, 204, 22, 0.6);
+            transform: translateY(-2px);
+        }
+        
+        .wallet-address {
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Header with Logo -->
+        <header class="flex flex-col items-center mb-12" data-aos="fade-down">
+            <img src="https://i.ibb.co/qFjFzR8p/IMG-4327.jpg" alt="Green Hearts Club Logo" class="w-32 h-32 rounded-full mb-4 border-4 border-primary">
+            <h1 class="text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                Green Hearts Club
+            </h1>
+            <div class="flex space-x-4 mt-4">
+                <a href="/en" class="text-gray-400 hover:text-primary">EN</a>
+                <a href="/ru" class="text-primary font-bold">RU</a>
+            </div>
+        </header>
+
+        <!-- Project Description -->
+        <section class="gradient-card rounded-2xl p-6 mb-12" data-aos="fade-up">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Описание проекта</h2>
+            <p class="text-lg leading-relaxed">
+                Green Hearts Club — это закрытое сообщество холдеров NFT-фрагментов, которые вместе формируют уникальный подарок. 
+                Ценность проекта в объединении людей и создании комьюнити, которое самостоятельно решает судьбу коллекции. 
+                Каждый фрагмент = голос, каждая покупка = шаг к укреплению клуба.
+            </p>
+        </section>
+
+        <!-- Collection Link -->
+        <section class="mb-12 text-center" data-aos="fade-up">
+            <a href="https://getgems.io/collection/EQAnmo8tBH8gSErzWDrdlJiF8kxgfJEynKMIBxL2MkuHvPBc" 
+               class="neon-btn inline-block bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 px-8 rounded-full text-lg">
+                Открыть коллекцию на GetGems
+            </a>
+        </section>
+
+        <!-- Famous Members -->
+        <section class="mb-12" data-aos="fade-up">
+            <h2 class="text-2xl font-bold mb-6 text-center text-primary">Известные участники</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="gradient-card rounded-2xl p-6 flex items-center">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold">RILLDANCE</h3>
+                        <a href="https://rilldance.t.me" class="text-secondary hover:underline flex items-center mt-2">
+                            <i data-feather="link" class="w-4 h-4 mr-2"></i> Telegram
+                        </a>
+                    </div>
+                </div>
+                <div class="gradient-card rounded-2xl p-6 flex items-center">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold">Alex Zackerman</h3>
+                        <a href="https://giftgoy.t.me" class="text-secondary hover:underline flex items-center mt-2">
+                            <i data-feather="link" class="w-4 h-4 mr-2"></i> Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TON Address -->
+        <section class="mb-12" data-aos="fade-up">
+            <div class="gradient-card rounded-2xl p-6">
+                <h2 class="text-2xl font-bold mb-4 text-primary">TON-адрес сердца проекта</h2>
+                <p class="mb-4">Адрес для отправки фрагментов и TON:</p>
+                <div class="bg-black bg-opacity-30 p-4 rounded-lg mb-4">
+                    <code class="wallet-address">UQCa_Kh7qS6FrAnGcJjuWA65ukuHB9OwvIsKyQVQRrW_P-hT</code>
+                </div>
+                <button onclick="copyAddress()" class="neon-btn bg-gradient-to-r from-primary to-secondary text-white font-bold py-2 px-6 rounded-full">
+                    Скопировать адрес
+                </button>
+            </div>
+        </section>
+
+        <!-- News -->
+        <section class="gradient-card rounded-2xl p-6" data-aos="fade-up">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Новости</h2>
+            <p class="mb-4">Следите за актуальными обновлениями проекта в Telegram:</p>
+            <a href="https://t.me/green_heart_club" class="inline-flex items-center text-secondary hover:underline">
+                <i data-feather="send" class="w-5 h-5 mr-2"></i> Присоединиться к Telegram
+            </a>
+        </section>
+    </div>
+
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        function copyAddress() {
+            const address = "UQCa_Kh7qS6FrAnGcJjuWA65ukuHB9OwvIsKyQVQRrW_P-hT";
+            navigator.clipboard.writeText(address).then(() => {
+                alert("Адрес скопирован в буфер обмена!");
+            });
+        }
+    </script>
+</body>
+</html>
